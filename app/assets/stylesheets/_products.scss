@@ -72,6 +72,10 @@
     margin-bottom: 20px;
     color: #0072bc;
     cursor: pointer;
+    transition: $standart-trans;
+    &:hover {
+      color: #ea1653;
+    }
   }
 
   &__price {
