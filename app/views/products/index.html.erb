@@ -1,0 +1,112 @@
+<div class="container container_catalog">
+  <h2 class="catalog__title">Каталог телефонов:</h2>
+  <p class="catalog__description">
+    По вашему усмотрению, в каталог можно добавить еще новые товары:
+    <a href="#">добавить товар</a>
+  </p>
+
+  <% @products.each do |product| %>
+    <article class="product__item row row__space-between">
+      <div class="product__item-data row">
+        <div class="product__item-data_img">
+          <div class="product__img">
+            <img src="<%= product.image_url %>" alt="mobile-phone">
+          </div>
+        </div>
+        <div class="product__item-data_text">
+          <span class="product__id">
+            код <%= product.product_id %>
+          </span>
+          <h3 class="product__title">
+            <%= product.title %>
+          </h3>
+          <div class="row">
+            <table class="product__spec">
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Диагональ экрана:</th>
+                <td class="product__spec_attr">
+                  <%= product.diagonal %>"
+                </td>
+              </tr>
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Оперативная память:</th>
+                <td class="product__spec_attr">
+                  <%= product.ram %> Гб
+                </td>
+              </tr>
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Постоянная память:</th>
+                <td class="product__spec_attr">
+                  <%= product.storage %> Гб
+                </td>
+              </tr>
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Версия ОС:</th>
+                <td class="product__spec_attr">
+                  <%= product.system_version %>
+                </td>
+              </tr>
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Разрешение камеры:</th>
+                <td class="product__spec_attr">
+                  <%= product.camera %> Мп
+                </td>
+              </tr>
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Кол-во SIM-карт:</th>
+                <td class="product__spec_attr">
+                  <%= product.sim_card %>
+                </td>
+              </tr>
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Емкость аккумулятора:</th>
+                <td class="product__spec_attr">
+                  <%= product.battery_capacity %> мАч
+                </td>
+              </tr>
+              <tr class="product__spec_row">
+                <th class="product__spec_title">Вес:</th>
+                <td class="product__spec_attr">
+                  <%= product.weight %> г
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="product__item-tools col">
+        <div class="product__price_old">
+          <span class="product__price-old_num">
+            <%= product.price + 28 %>
+          </span>
+          <span class="product__price-old_currency">р.</span>
+        </div>
+        <div class="product__price">
+          <span class="product__price_num">
+            <%= product.price %>
+          </span>
+          <span class="product__price_currency">р.</span>
+        </div>
+        <div class="product__btn-block">
+          <button class="btn btn-edit">Изменить</button>
+          <button class="btn btn-del">Удалить</button>
+        </div>
+        <div class="product__credit-info">
+          <span>
+            От <%= (product.price / 6).round 2 %> р./месяц при оплате частями на 6мес.
+          </span>
+        </div>
+        <div class="product__description">
+          <%= product.description %>
+        </div>
+        <div class="product__created-at">
+          <span class="product__description">Поступил в продажу:</span>
+          <time class="product__add-time" datetime="<%= product.created_at.strftime('%Y-%m-%d %H:%M') %>">
+            <%= product.created_at.strftime('%Y-%m-%d %H:%M') %>
+          </time>
+        </div>
+      </div>
+    </article>
+    <% end %>
+</div>

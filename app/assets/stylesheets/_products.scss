@@ -1,0 +1,146 @@
+.container_catalog {
+  max-width: 950px;
+}
+
+.catalog__description {
+  font-size: 18px;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+.product {
+  &__item {
+    padding: 20px 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 15%);
+    }
+
+    &-data {
+      margin-right: 30px;
+      &_text {
+        max-width: 400px;
+        margin-left: 30px;
+      }
+    }
+
+    &-tools {
+      max-width: 150px;
+    }
+  }
+
+  &__created-at {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+  &__add-time {
+    font-size: 12px;
+  }
+
+  &__spec {
+    &_row {
+      display: table-row;
+      text-align: left;
+    }
+    &_title {
+      width: 45%;
+      line-height: 18px;
+      vertical-align: top;
+      padding-bottom: 6px;
+      padding-right: 12px;
+      z-index: 2;
+      white-space: nowrap;
+    }
+
+    &_attr {
+      padding-bottom: 6px;
+      line-height: 18px;
+      vertical-align: top;
+    }
+  }
+
+  &__id {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #0072bc;
+    cursor: pointer;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: nowrap;
+    margin-bottom: 12px;
+    &_currency {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &_old {
+      display: block;
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 8px;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: line-through;
+    }
+  }
+
+  &__btn-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  &__credit-info {
+    font-size: 11px;
+    line-height: 18px;
+    color: #1a1a1a;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #1a1a1a;
+  }
+}
+
+.btn {
+  position: relative;
+  display: block;
+  height: 31px;
+  line-height: 31px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  z-index: 1;
+  box-shadow: $light-box-shadow;
+  transition: $standart-trans;
+  &:hover {
+    box-shadow: $hover-box-shadow;
+  }
+
+  &-edit {
+    margin-bottom: 15px;
+    background: #0072bc;
+    &:hover {
+      background: #01568f;
+    }
+  }
+  &-del {
+    background: #ea1653;
+    &:hover {
+      background: #bc1242;
+    }
+  }
+}
