@@ -6,6 +6,24 @@
   font-size: 18px;
   font-weight: 200;
   margin-top: 10px;
+
+  &_link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: $main-radius;
+    background: #0072bc;
+    transition: $standart-trans;
+    box-shadow: $light-box-shadow;
+    
+    &:hover {
+      background: #01568f;
+      box-shadow: $hover-box-shadow;
+    }
+  }
 }
 
 .product {
@@ -67,6 +85,7 @@
     margin-bottom: 12px;
   }
   &__title {
+    display: inline-block;
     font-size: 16px;
     line-height: 1;
     margin-bottom: 20px;
@@ -134,15 +153,33 @@
     box-shadow: $hover-box-shadow;
   }
 
+  &-back {
+    display: inline-block;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    padding: 10px;
+    background: #bc1242;
+    color: #fff;
+    border-radius: $main-radius;
+    transition: $standart-trans;
+
+    &:hover {
+      background: #ea1653;
+    }
+  }
+
   &-edit {
     margin-bottom: 15px;
     background: #0072bc;
+    border-radius: $main-radius;
     &:hover {
       background: #01568f;
     }
   }
   &-del {
     background: #ea1653;
+    border-radius: $main-radius;
     &:hover {
       background: #bc1242;
     }

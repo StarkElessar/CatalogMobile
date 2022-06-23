@@ -13,6 +13,10 @@
 
   <body>
     <div class="wrapper">
+      <% flash.each do |k, v| %>
+        <%= tag.div v, class: "alert alert__#{k}", role: 'alert' %>
+      <% end %>
+
       <%= yield %>
     </div>
   </body>

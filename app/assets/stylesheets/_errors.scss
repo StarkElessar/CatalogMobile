@@ -1,0 +1,28 @@
+.block-errors {
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: $main-radius;
+  background: #f8d7da;
+  border-color: 1px solid#f5c6cb;
+  box-shadow: $light-box-shadow;
+  transition: $standart-trans;
+  
+  &:hover {
+    box-shadow: $hover-box-shadow;
+  }
+  
+  &__list {
+    padding: 10px;
+    color: #721c24;
+  }
+
+  & li {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}

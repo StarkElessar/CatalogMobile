@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: %i[show edit update destroy]
+
   def index
     @products = Product.all
+  end
+
+  def show
   end
 
   def new 
@@ -8,32 +13,31 @@ class ProductsController < ApplicationController
   end
   
   def create
-    @product = Product.new product_params
+    @product = Product.new(product_params)
 
     if @product.save
+      flash[:success] = 'Товар успешно добавлен в каталог!'
       redirect_to products_path
     else
       render :new
     end
   end
-
+  
   def edit
-    @product = Product.find_by id: params[:id]
   end
-
+  
   def update
-    @product = Product.find_by id: params[:id]
-
-    if @product.update product_params
+    if @product.update(product_params)
+      flash[:success] = 'Товар успешно обновлён!'
       redirect_to products_path
     else
       render :edit
     end
   end
-
+  
   def destroy
-    @product = Product.find_by id: params[:id]
     @product.destroy
+    flash[:success] = 'Товар успешно удалён из каталога!'
 
     redirect_to products_path
   end
@@ -57,5 +61,9 @@ class ProductsController < ApplicationController
       :description,
       :in_stock
     )
+  end
+
+  def set_product
+    @product = Product.find(id: params[:id])
   end
 end

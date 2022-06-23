@@ -2,7 +2,7 @@
   <h2 class="catalog__title">Каталог телефонов:</h2>
   <p class="catalog__description">
     По вашему усмотрению, в каталог можно добавить еще новые товары:
-    <%= link_to "добавить товар", new_product_path  %>
+    <%= link_to "добавить товар", new_product_path, class: "catalog__description_link" %>
   </p>
 
   <% @products.each do |product| %>
@@ -10,16 +10,24 @@
       <div class="product__item-data row">
         <div class="product__item-data_img">
           <div class="product__img">
-            <img src="<%= product.image_url %>" alt="mobile-phone">
+            <%= image_tag "#{product.image_url}", alt: "mobile-phone" %>
           </div>
         </div>
         <div class="product__item-data_text">
           <span class="product__id">
             код <%= product.product_id %>
           </span>
-          <h3 class="product__title">
-            <%= product.title %>
-          </h3>
+
+          <!-- TODO Здесь мне нужно вывести слово "в наличии или нет в наличии" -->
+          <% #if product.in_stock do %>
+            <!-- <span>есть в наличии</span> -->
+            <% #else %>
+            <!-- <span>нет в наличии</span> -->
+          <% #end %>
+          <!-- TODO В зависимости от того in_stock: true или false -->
+
+          <%= link_to "#{product.title}", product_path(product.id), class: "product__title" %>
+
           <div class="row">
             <table class="product__spec">
               <tr class="product__spec_row">
