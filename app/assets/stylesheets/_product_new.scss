@@ -1,0 +1,22 @@
+.form-create {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px 10px;
+
+  &__input-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  &__input {
+    border: 1px solid $main-bg;
+    border-radius: $main-radius;
+    padding: 5px;
+  }
+}

@@ -1,5 +1,16 @@
 <h1>Catalog Mobile</h1>
 
+<nav>
+  <ul>
+    <li>
+      <%= link_to "Создать", new_product_path  %>
+    </li>
+    <li>
+      <%= link_to "Каталог", products_path  %>
+    </li>
+  </ul>
+</nav>
+
 <footer class="footer">
   &copy; Сергей <%= Time.now.year %>
 </footer>

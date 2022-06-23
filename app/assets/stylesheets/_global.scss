@@ -2,6 +2,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: $main-font;
+  
 
   &.lock {
     overflow: hidden;
@@ -53,18 +54,39 @@ body {
   font-family: $main-font
 }
 
+.mb {
+  margin-bottom: 10px;
+  &-s {
+    margin-bottom: 20px;
+  }
+  &-lg {
+    margin-bottom: 40px;
+  }
+}
+.mt {
+  margin-top: 10px;
+  &-s {
+    margin-top: 20px;
+  }
+  &-lg {
+    margin-top: 40px;
+  }
+}
+
+
+
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
   background-color: $white-color;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: $first-accent-color;
+  background-color: #b10a39;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 10px;
   background-color: #f9f9fd;
 }

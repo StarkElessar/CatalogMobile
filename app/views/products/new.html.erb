@@ -1,0 +1,88 @@
+<h2 class="catalog__title mb-s">Добавить новый товар в каталог</h2>
+
+<%= form_with(model: @product, class: "form-create" ) do |prod| %>
+  <div class="mb-s form-create__input-block">
+    <%= prod.label :title, "Наименование:" , class: "form-create__label" %>
+    <%= prod.text_field :title, required: true, class: "form-create__input" %>
+  </div>
+
+  <div class="mb-s form-create__input-block">
+    <%= prod.label :image_url, "Путь к изображению:" , class: "form-create__label" %>
+    <%= prod.text_field :image_url, required: true, class: "form-create__input" %>
+  </div>
+
+  <div class="row row__space-between">
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :product_id, "Код товара:" , class: "form-create__label" %>
+      <%= prod.text_field :product_id, required: true, class: "form-create__input" %>
+    </div>
+
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :diagonal, "Диагональ экрана:" , class: "form-create__label" %>
+      <%= prod.text_field :diagonal, required: true, class: "form-create__input" %>
+    </div>
+  </div>
+
+  <div class="row row__space-between">
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :ram, "ОЗУ:" , class: "form-create__label" %>
+      <%= prod.text_field :ram, required: true, class: "form-create__input" %>
+    </div>
+
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :storage, "Постоянная память:" , class: "form-create__label" %>
+      <%= prod.text_field :storage, required: true, class: "form-create__input" %>
+    </div>
+  </div>
+
+  <div class="row row__space-between">
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :system_version, "Версия ОС:" , class: "form-create__label" %>
+      <%= prod.text_field :system_version, required: true, class: "form-create__input" %>
+    </div>
+
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :camera, "Разрешение камеры:" , class: "form-create__label" %>
+      <%= prod.text_field :camera, required: true, class: "form-create__input" %>
+    </div>
+  </div>
+
+  <div class="row row__space-between">
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :sim_card, "Кол-во SIM-карт:" , class: "form-create__label" %>
+      <%= prod.text_field :sim_card, required: true, class: "form-create__input" %>
+    </div>
+
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :battery_capacity, "Емкость аккумулятора:" , class: "form-create__label" %>
+      <%= prod.text_field :battery_capacity, required: true, class: "form-create__input" %>
+    </div>
+  </div>
+  <div class="row row__space-between">
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :weight, "Вес:" , class: "form-create__label" %>
+      <%= prod.text_field :weight, required: true, class: "form-create__input" %>
+    </div>
+
+    <div class="mb-s form-create__input-block">
+      <%= prod.label :price, "Цена:" , class: "form-create__label" %>
+      <%= prod.text_field :price, required: true, class: "form-create__input" %>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="mb-s form-create__input-block">
+    <%= prod.label :description, "Описание:" , class: "form-create__label" %>
+    <%= prod.text_area :description, required: true, class: "form-create__input" %>
+  </div>
+
+  <div class="mb-s form-create__input-block">
+    <%= prod.label :in_stock, "Наличие на складе:" , class: "form-create__label" %>
+    <%= prod.check_box :in_stock, class: "form-create__input" %>
+  </div>
+
+  <%= prod.submit "Добавить в каталог" , class: "btn btn-edit" %>
+<% end %>

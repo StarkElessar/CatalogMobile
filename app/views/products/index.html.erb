@@ -2,7 +2,7 @@
   <h2 class="catalog__title">Каталог телефонов:</h2>
   <p class="catalog__description">
     По вашему усмотрению, в каталог можно добавить еще новые товары:
-    <a href="#">добавить товар</a>
+    <%= link_to "добавить товар", new_product_path  %>
   </p>
 
   <% @products.each do |product| %>
@@ -89,8 +89,11 @@
           <span class="product__price_currency">р.</span>
         </div>
         <div class="product__btn-block">
-          <button class="btn btn-edit">Изменить</button>
-          <button class="btn btn-del">Удалить</button>
+          <%= link_to "Изменить", edit_product_path(product.id), class: "btn btn-edit" %>
+          <%= link_to "Удалить", 
+            product_path(product.id), 
+            data: {method: :delete, confirm: "Ты уверен?"}, 
+            class: "btn btn-del" %>
         </div>
         <div class="product__credit-info">
           <span>
