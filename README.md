@@ -13,4 +13,9 @@ For this web application I used technologies such as:
 
 ---
 
-To run the application - clone it from the git repository and use the terminal to invoke the command: <bin/dev>
+To run the application - clone it from the git repository,
+install the dependencies and devDependencies and start the server:
+
+```sh
+bin/dev
+```
