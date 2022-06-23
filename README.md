@@ -1,6 +1,6 @@
 # CatalogMobile Ruby on Rails App
 
-## Developing a small directory using PostgreSQL
+## Developing a small App using PostgreSQL
 
 This is an open source web application that makes me happy, my code is transformed, and my knowledge increases.
 For this web application I used technologies such as:
@@ -10,3 +10,7 @@ For this web application I used technologies such as:
 - Webpack
 - PostgreSQL
 - Ruby on Rails 7
+
+---
+
+To run the application - clone it from the git repository and use the terminal to invoke the command: <bin/dev>
