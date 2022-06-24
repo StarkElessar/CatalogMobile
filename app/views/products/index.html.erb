@@ -1,7 +1,11 @@
 <div class="container container_catalog">
   <h2 class="catalog__title">Каталог телефонов:</h2>
   <p class="catalog__description">
-    По вашему усмотрению, в каталог можно добавить еще новые товары:
+    На данный момент в нашем каталоге представлено <%= @products.count %> современных
+    <%= inclination(@products.count, 'смартфон', 'смартфона', 'смартфонов') %>
+  </p>
+  <p class="catalog__description">
+    По вашему усмотрению, в каталог можно добавить еще новые смартфоны:
     <%= link_to "добавить товар", new_product_path, class: "catalog__description_link" %>
   </p>
 
