@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header__container">
+    <%= link_to "CatalogMobile", root_path, class: "header__logo" %>
+    <nav class="header__menu main-menu">
+      <ul class="main-menu__list">
+        <li class="main-menu__item">
+          <%= link_to "Главная", root_path %>
+        </li>
+        <li class="main-menu__item">
+          <%= link_to "Каталог", products_path  %>
+        </li>
+        <li class="main-menu__item">
+          <%= link_to "Создать", new_product_path  %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -19,10 +19,14 @@
               код <%= product.product_id %>
             </span>
             <span class="product__id">
-              <%= product.in_stock ? "В " : "Нет в " %>наличии
+              <% if product.in_stock %>
+                <%= fa_icon('check') %>
+              <% else %>
+                <%= fa_icon('spinner') %>
+              <% end %>  
+              <%= product.in_stock ? " В" : "Нет в" %> наличии
             </span>
           </div>
-
 
           <%= link_to "#{product.title}", product_path(product.id), class: "product__title" %>
 
@@ -96,13 +100,12 @@
         </div>
         <div class="product__btn-block">
           <%= link_to "Изменить", edit_product_path(product.id), class: "btn btn-edit" %>
-          <%= link_to "Удалить", 
-            product_path(product.id), 
-            data: {method: :delete, confirm: "Ты уверен?"}, 
-            class: "btn btn-del" %>
+          <%= button_to "Удалить", product_path(product.id), data: {method: :delete, confirm: "Данный товар будет удалён из Базы Данных, продолжить?"}, class: "btn btn-del" %>
+
         </div>
         <div class="product__credit-info">
-          <span>
+          <%= fa_icon('pie-chart', class: 'product__credit-info_icon') %>
+          <span class="product__credit-info_text">
             От <%= (product.price / 6).round 2 %> р./месяц при оплате частями на 6мес.
           </span>
         </div>

@@ -10,6 +10,7 @@ gem "cssbundling-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
+gem "font-awesome-rails", "~> 4.7"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -24,3 +25,4 @@ end
 group :development do
   gem "web-console"
 end
+

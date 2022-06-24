@@ -14,12 +14,17 @@ body {
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
-  padding: 20px 0;
+  min-height: 100%;
+  padding-top: 50px;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 .container {

@@ -23,6 +23,11 @@
       background: #01568f;
       box-shadow: $hover-box-shadow;
     }
+
+    @media (max-width: 777px) {
+      margin-left: 0;
+      margin-top: 8px;
+    }
   }
 }
 
@@ -128,9 +133,20 @@
   }
 
   &__credit-info {
+    display: flex;
     font-size: 11px;
     line-height: 18px;
     color: #1a1a1a;
+
+    &_icon {
+      padding-top: 3px;
+      margin-right: 5px;
+      color: #0072bc;
+    }
+
+    &_text {
+      display: inline-block;
+    }
   }
 
   &__description {
@@ -158,8 +174,8 @@
 
   &-back {
     display: inline-block;
-    position: fixed;
-    top: 1%;
+    position: absolute;
+    top: 0.5%;
     left: 1%;
     padding: 10px;
     background: #bc1242;
@@ -181,6 +197,7 @@
     }
   }
   &-del {
+    width: 100%;
     background: #ea1653;
     border-radius: $main-radius;
     &:hover {

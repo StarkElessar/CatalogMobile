@@ -1,11 +1,12 @@
 .alert {
-  position: fixed;
-  top: 2%;
+  position: absolute;
+  top: 0.5%;
   right: 1%;
   padding: 0.75rem 1.25rem;
   border-radius: $main-radius;
   border: 1px solid transparent;
   box-shadow: $light-box-shadow;
+  z-index: 5;
 
   &__danger {
     color: #721c24;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
   <head>
     <meta charset="utf-8">
     <title>CatalogMobile</title>
@@ -12,12 +12,18 @@
   </head>
 
   <body>
+    <%= render 'shared/header' %>
+
     <div class="wrapper">
       <% flash.each do |k, v| %>
         <%= tag.div v, class: "alert alert__#{k}", role: 'alert' %>
       <% end %>
 
-      <%= yield %>
+      <main class="main">
+        <%= yield %>
+      </main>
+
+      <%= render 'shared/footer' %>
     </div>
   </body>
 </html>
