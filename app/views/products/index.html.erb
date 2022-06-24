@@ -104,7 +104,7 @@
         </div>
         <div class="product__btn-block">
           <%= link_to "Изменить", edit_product_path(product.id), class: "btn btn-edit" %>
-          <%= button_to "Удалить", product_path(product.id), data: {method: :delete, confirm: "Данный товар будет удалён из Базы Данных, продолжить?"}, class: "btn btn-del" %>
+          <%= link_to "Удалить", product_path(product.id), data: {method: :delete, confirm: "Данный товар будет удалён из Базы Данных, продолжить?"}, class: "btn btn-del" %>
 
         </div>
         <div class="product__credit-info">
