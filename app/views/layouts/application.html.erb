@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <%= render 'shared/header' %>
+    <%= render partial: 'shared/header' %>
 
     <div class="wrapper">
       <% flash.each do |k, v| %>
@@ -23,7 +23,7 @@
         <%= yield %>
       </main>
 
-      <%= render 'shared/footer' %>
+      <%= render partial: 'shared/footer' %>
     </div>
   </body>
 </html>
